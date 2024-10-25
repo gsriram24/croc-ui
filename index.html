@@ -1,18 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
-		<meta
-			http-equiv="Content-Security-Policy"
-			content="default-src 'self'; script-src 'self'"
-		/>
-		<title>Croc UI</title>
-	</head>
-	<body>
-		<h1>Welcome to Croc UI!</h1>
-		We are using Node.js <span id="node-version"></span>, Chromium
-		<span id="chrome-version"></span>, and Electron
-		<span id="electron-version"></span>.
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Electron App</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+      }
+      button {
+        padding: 10px 20px;
+        font-size: 16px;
+      }
+      pre {
+        white-space: pre-wrap; /* Wrap long lines */
+        background: #f0f0f0;
+        padding: 10px;
+        border: 1px solid #ccc;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Run Terminal Command</h1>
+    <button id="run-command">Run Git Command</button>
+    <h2>Output:</h2>
+    <pre id="output" style="height: 200px"></pre>
+
+    <h1>Select multiple files</h1>
+    <button id="select-files">Select files</button>
+    <h2>Selected:</h2>
+    <pre id="selected-files"></pre>
+    <script src="./src/renderer.js"></script>
+  </body>
 </html>
