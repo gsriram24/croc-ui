@@ -1,0 +1,14 @@
+{
+	"name": "croc-ui",
+	"version": "0.0.1",
+	"description": "A GUI App for sending files via croc",
+	"main": "index.js",
+	"author": "G Sriram",
+	"license": "MIT",
+	"scripts": {
+		"start": "electron ."
+	},
+	"devDependencies": {
+		"electron": "^33.0.2"
+	}
+}
