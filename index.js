@@ -15,6 +15,7 @@ function createWindow() {
   });
 
   mainWindow.loadFile("index.html");
+  mainWindow.webContents.openDevTools();
 }
 
 ipcMain.handle("run-command", async (event, command, args) => {
