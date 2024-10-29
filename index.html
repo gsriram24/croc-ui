@@ -3,34 +3,31 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Electron App</title>
+    <title>Electron Terminal</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/xterm/css/xterm.css"
+    />
     <style>
       body {
-        font-family: Arial, sans-serif;
-        margin: 20px;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #282c34;
+        color: white;
       }
-      button {
-        padding: 10px 20px;
-        font-size: 16px;
-      }
-      pre {
-        white-space: pre-wrap; /* Wrap long lines */
-        background: #f0f0f0;
-        padding: 10px;
+      #terminal {
+        width: 100%;
+        height: 100%;
         border: 1px solid #ccc;
       }
     </style>
   </head>
   <body>
-    <h1>Run Terminal Command</h1>
-    <button id="run-command">Run Git Command</button>
-    <h2>Output:</h2>
-    <pre id="output" style="height: 200px"></pre>
-
-    <h1>Select multiple files</h1>
-    <button id="select-files">Select files</button>
-    <h2>Selected:</h2>
-    <pre id="selected-files"></pre>
-    <script src="./src/renderer.js"></script>
+    <div id="terminal"></div>
+    <script src="https://cdn.jsdelivr.net/npm/xterm/lib/xterm.js"></script>
+    <script type="module" src="./src/renderer.js"></script>
   </body>
 </html>
