@@ -11,16 +11,19 @@
     <link rel="stylesheet" href="./src/style.css" />
   </head>
   <body>
-    <div id="terminal"></div>
-    <!-- Add this to your index.html -->
-    <div id="croc-code-display" style="display: none">
-      <h3>Croc Transfer Code:</h3>
-      <div id="code-value" style="font-size: 24px; font-weight: bold"></div>
-    </div>
-    <button id="cancel-transfer">Cancel Transfer</button>
-    <div id="command-input-area">
-      <input type="text" id="command-input" placeholder="Enter command..." />
-      <button id="run-button">Run</button>
+    <div class="file-transfer-container">
+      <input type="file" id="fileInput" class="file-input" />
+      <button id="sendFileButton" class="send-button">Send File</button>
+
+      <!-- Status display elements -->
+      <div id="transferStatus" class="status-container" style="display: none">
+        <h3>Transfer Status</h3>
+        <div id="statusMessage"></div>
+        <div id="crocCode" class="code-display"></div>
+        <button id="cancelTransfer" class="cancel-button">
+          Cancel Transfer
+        </button>
+      </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/xterm/lib/xterm.js"></script>
     <script type="module" src="./src/renderer.js"></script>
